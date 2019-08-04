@@ -39,13 +39,12 @@
     <!-- 配置定时任务 -->
     <bean id="myTask" class="com.yuanziren.task.MyTask"></bean>
 
-    <!--<task:scheduled-tasks>-->
-    <!--&lt;!&ndash; cron 表达式 规定什么时间执行 &ndash;&gt;-->
-    <!--<task:scheduled ref="myTask" method="job01" cron="0/3 * * * * ? "/>-->
-    <!--<task:scheduled ref="myTask" method="job02" cron="0/6 * * * * ? "/>-->
-    <!--</task:scheduled-tasks>-->
-
-    <task:annotation-driven />
+   <!-- <task:scheduled-tasks>
+        &lt;!&ndash; cron 表达式 规定什么时间执行 &ndash;&gt;
+        <task:scheduled ref="myTask" method="job01" cron="0/3 * * * * ? "/>
+        <task:scheduled ref="myTask" method="job02" cron="0/6 * * * * ? "/>
+        </task:scheduled-tasks>
+    <task:annotation-driven />-->
 
 
 </beans>

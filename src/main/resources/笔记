@@ -21,3 +21,16 @@
     5、单元测试类SimpleOrderManagerTest
     6、发送邮件
 四、Spring定时任务
+    1、配置定时任务
+        <bean id="myTask" class="com.yuanziren.task.MyTask"></bean>
+        1.1通过注解
+            @Scheduled(cron = "0/3 * * * * ? ")
+        1.2通过xml
+             <task:scheduled-tasks>
+                    <!-- cron 表达式 规定什么时间执行 -->
+                    <task:scheduled ref="myTask" method="job01" cron="0/3 * * * * ? "/>
+                    <task:scheduled ref="myTask" method="job02" cron="0/6 * * * * ? "/>
+                    </task:scheduled-tasks>
+              <task:annotation-driven />
+    2、通过MyTaskTest单元测试类启动Spring环境
+    3、在Mytask中注入bean，执行被注解@Scheduled标记或者在xml标记的方法
