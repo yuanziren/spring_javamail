@@ -1,0 +1,23 @@
+一、普通javamail发送邮件
+    1. 添加JavaMail依赖
+          <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4</version>
+          </dependency>
+    2.编写发送邮件实体类SendMail、MyAuthenticator
+    3.编写单元测试类SendMailTest
+    4.运行
+二、javamail工具类实现邮件发送
+    1、添加JavaMail依赖
+    2、在util包中引入两个工具类
+    3、编写单元测试类SendMailTest
+    4、运行
+三、Spring集成JavaMail邮件发送
+    1、添加Spring依赖
+    2、添加spring.xml配置文件
+    3、编写接口OrderManager
+    4、实现接口SimpleOrderManager
+    5、单元测试类SimpleOrderManagerTest
+    6、发送邮件
+四、Spring定时任务
